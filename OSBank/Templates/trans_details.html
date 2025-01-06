@@ -1,0 +1,139 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+
+<h4 id="tablehead">Account Info:</h4>
+<table class="table">
+  {% for detail in detail0 %}
+    <thead>
+      <tr>
+        <th scope="col">
+          <br><a style="text-decoration: underline;">Username</a> : {{detail.user}} <br>
+        </th>
+        <th>
+          <br><a style="text-decoration: underline;">Name</a> : {{detail.name}} <br> 
+        </th>
+        <th>
+          <br><a style="text-decoration: underline;">Account Number</a> : {{detail.acc_no}} <br>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <br><a style="text-decoration: underline;">Email-Id</a> : {{detail.email}} <br>
+        </th>
+        <th>
+          <br><a style="text-decoration: underline;">Date of Birth</a> : {{detail.date_of_birth}} <br>
+        </th>
+        <th>
+          <br><a style="text-decoration: underline;">Bank Type</a> : {{detail.bank_type}} <br>
+        </th>
+      </tr>
+      <tr>
+        <th style="color: green;">
+          <br><a style="text-decoration: underline;">Total Amount</a> : {{detail.amount}} <br>
+        </th>
+        <th style="color: red;">
+          <br><a style="text-decoration: underline;">Total Loan</a> : {{detail.loan}} <br>
+        </th>
+      </tr>
+    </thead>
+  {% endfor %}
+</table>
+
+<h4 id="tablehead">Amount Added:</h4>
+<table class="table" style="text-align: center;">
+    <thead>
+      <tr style="text-decoration: underline;">
+        <th scope="col">Amount Added</th>
+        <th scope="col">Date & Time</th>
+      </tr>
+    </thead>
+    {% for detail in detail1a %}
+    <tbody>
+      <tr>
+        <td style="color: green;">{{detail.amount_added}}</td>
+        <td>{{detail.created}}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+<h4 id="tablehead">Loan Received: <a style="font-weight: lighter; font-size: 18px;">(Amounts Received are added to loan and Amount)</a></h4>
+<table class="table" style="text-align: center;">
+    <thead>
+      <tr style="text-decoration: underline;">
+        <th scope="col">Loan Amount</th>
+        <th scope="col">Date & Time</th>
+      </tr>
+    </thead>
+    {% for detail in detail1b %}
+    <tbody>
+      <tr>
+        <td>{{detail.loan_amount}}</td>
+        <td>{{detail.created}}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+<h4 id="tablehead">Amount Transfer:</h4>
+<table class="table" style="text-align: center;">
+    <thead>
+      <tr style="text-decoration: underline;">
+        <th scope="col">Account Number</th>
+        <th scope="col">Amount Added</th>
+        <th scope="col">Date & Time</th>
+      </tr>
+    </thead>
+    {% for detail in detail1c %}
+    <tbody>
+      <tr>
+        <td>{{detail.account_number.pk}}</td>
+        <td>{{detail.amount_added}}</td>
+        <td>{{detail.created}}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+<h4 id="tablehead">Debit Transactions:</h4>
+<table class="table" style="text-align: center;">
+    <thead>
+      <tr style="text-decoration: underline;">
+        <th scope="col">Bill Payment For</th>
+        <th scope="col">Amount Payed</th>
+        <th scope="col">Date & Time</th>
+      </tr>
+    </thead>
+    {% for detail in detail2 %}
+    <tbody>
+      <tr>
+        <td>{{detail.bill_payments}}</td>
+        <td>{{detail.debitpay_amount}}</td>
+        <td>{{detail.created}}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+<h4 id="tablehead">Credit Transactions: <a style="font-weight: lighter; font-size: 18px;">(All payed amounts are added to loan)</a></h4>
+<table class="table" style="text-align: center;">
+    <thead>
+      <tr style="text-decoration: underline;">
+        <th scope="col">Bill Payment For</th>
+        <th scope="col">Amount Payed</th>
+        <th scope="col">Date & Time</th>
+      </tr>
+    </thead>
+    {% for detail in detail3 %}
+    <tbody>
+      <tr>
+        <td>{{detail.bill_payments}}</td>
+        <td style="color: red;">{{detail.creditpay_amount}}</td>
+        <td>{{detail.created}}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+{% endblock %}

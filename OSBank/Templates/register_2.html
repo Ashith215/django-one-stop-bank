@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+{% load static %}
+{% load widget_tweaks %}
+
+<form method="post">
+    {% csrf_token %} 
+
+    <div class="form-group">
+        <div class="form-outline">
+        <h1>Registration Form</h1>
+        </div>
+
+        <h5 style="text-align: center; padding-top: 1px;">(page - 2/2)</h5>
+        {{form.user.label_tag}} 
+        <div class="form-item">{% render_field form.user class="form-control" %}</div>
+        {{form.name.label_tag}} 
+        <div class="form-item">{% render_field form.name placeholder="Enter your Full Name" maxlength="100" %}</div>
+        {{form.acc_no.label_tag}} 
+        <div class="form-item">{% render_field form.acc_no placeholder="Enter your 10 digit Account Number" maxlength="10" %}</div>
+        {{form.email.label_tag}} 
+        <div class="form-item">{% render_field form.email placeholder="Enter your Email-Id" maxlength="254" %}</div>
+        {{form.date_of_birth.label_tag}} 
+        <div class="form-item">{{form.date_of_birth}}</div>
+        {{form.amount.label_tag}} 
+        <div class="form-item">{% render_field form.amount placeholder="Amount from 100 to 99,999" minlength="3" maxlength="5" %}</div>
+        {{form.bank_type.label_tag}} 
+        <div class="form-control" style="border: 2px solid black;">{{form.bank_type}}</div>
+
+        <div class="checkbox" style="margin-top: 20px;">
+            <h5>{{form.agree.label_tag}} {% render_field form.agree type="checkbox" %} I accept the terms and conditions</h5>
+        </div>
+           
+        <button type="submit" class="submit-button" id="id_2">Register</button>
+    </div>
+
+</form>
+
+{% endblock %}

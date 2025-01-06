@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+{% load static %}
+{% load widget_tweaks %}
+
+<form action="" method="post">
+    {% csrf_token %} 
+
+    <div class="form-group-lg">
+
+        <div class="form-outline-lg">
+            <h1 style="text-transform: capitalize;">Credit Bill Payment</h1>
+        </div>
+ 
+        <h6 style="margin-top: 15px;">Username:</h6>
+        <div class="form-item">{% render_field form_c.user class="form-control" %}</div>
+
+        <h6 style="margin-top: 15px;">Bill Payments:</h6>
+        <div class="form-item">{% render_field form_c.bill_payments class="form-control" %}</div>
+
+        <h5 style="margin-top: 15px;">Amount:</h5>
+        <div class="form-item mb-3 mt-1">
+            {% render_field form_c.creditpay_amount placeholder="Enter the amount" class="form-control" %}
+        </div>
+
+        <button type="submit" class="submit-button c-button" id="id_4">CONFIRM</button>
+
+    </div>
+</form>
+
+
+{% endblock %}   

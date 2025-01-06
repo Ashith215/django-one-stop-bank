@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+{% load widget_tweaks %}
+
+<form action="" method="post">
+    {% csrf_token %} 
+    <div class="form-group-lg">
+
+        <div class="form-outline-lg">
+            <h1 style="text-transform: capitalize;">Edit Account</h1>
+        </div>
+        {{editForm.name.label_tag}} 
+        <div class="form-item">{% render_field editForm.name maxlength="100" class="form-control" %}</div>
+        {{editForm.acc_no.label_tag}} 
+        <div class="form-item">{% render_field editForm.acc_no maxlength="10" class="form-control" %}</div>
+        {{editForm.email.label_tag}} 
+        <div class="form-item">{% render_field editForm.email maxlength="254" class="form-control" %}</div>
+        {{editForm.date_of_birth.label_tag}} 
+        <div class="form-item">{% render_field editForm.date_of_birth class="form-control" type="date" %}</div>
+        {{editForm.bank_type.label_tag}} 
+        <div class="form-control" style="border: 2px solid black;">{% render_field editForm.bank_type class="form-select dropdown border-dark" %}</div>
+        <button type="submit" class="submit-button c-button" id="id_4">Save Changes</button>
+    </div>
+</form>
+
+{% endblock %} 

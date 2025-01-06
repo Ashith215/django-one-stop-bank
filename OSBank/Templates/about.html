@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+{% load static %}
+
+<div id="heading">
+    <h1>About Us</h1>
+</div>
+
+<div class="container" id="con-div">
+    <section class="about" id="about">
+        <div class="about-image" id="about-image">
+            <img src="{% static '/Images/About Bank.jpg' %}" width="500" height="300" alt="About Bank">
+        </div>
+        <div class="about-content" id="about-content">
+            <h2>Welcome To Our OS Bank Website</h2>
+            <p>
+                &emsp;&emsp;At OS Bank, we offer flexible and efficient banking solutions through 
+                our Current and Saving Accounts, designed to suit your unique financial needs. 
+                Whether you're managing day-to-day transactions with a Current Account or growing 
+                your savings with competitive interest rates, our app makes banking easier, faster, 
+                and more secure. With real-time access, seamless transfers, and personalized support, 
+                OS Bank is your go-to for all your financial goals.
+            </p>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="container" id="footer-container">
+        <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p>Email: OSBank@gmail.com</p>
+        <p>Phone: +91 1234567890</p>
+        <p>Adress: India</p>
+        </div>
+        <div class="footer-content">
+        <h3>Links</h3>
+        <ul class="list" id="list">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'register_1' %}">Register</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2024 your company. All rights reserved</p>
+    </div>
+</footer>
+
+{% endblock %} 

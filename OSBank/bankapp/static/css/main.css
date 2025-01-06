@@ -1,0 +1,317 @@
+/* navbar logo */
+/* #id1{
+    color: purple; 
+    font-size: x-large;
+    font-family: serif;
+    font-weight: bolder;
+    text-shadow: 1px 1px violet;
+} */
+
+/* entire form */
+/* .form-group{
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background: aqua;
+    border-radius: 10px;
+    border: 5px solid grey;
+    text-underline-offset: 5px;
+} */
+
+/* heading of form */
+/* .form-outline{
+    text-align: center;
+    color: white;
+    text-decoration: underline solid;
+    text-shadow: 1px 1px blue;
+    font-weight: bolder;
+    border: 2px solid grey;
+    background-color: rgb(16, 235, 16);
+    margin-bottom: 10px;
+    margin-left: -35px;
+    margin-right: -35px;
+    margin-top: -15px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+} */
+
+/* boxes for filling data */
+/* .form-item{
+    border: 2px solid black;
+} */
+
+/* Save & Next = button */
+/* .submit-button{
+    margin: 40px auto;
+    padding: 20px 40px;
+    color: black;
+    background-color: grey;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 10px;
+    width: 100%;
+    border: 5px solid green;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+    max-width: 200px; 
+    margin-left: 100px; 
+    font-weight: bolder;
+} */
+
+/* Save & Next = button - hover */
+/* #id_2{
+    cursor: pointer;
+    background-color: rgb(16, 235, 16);
+} */
+
+/*navbar login & logout button  */
+/* #id_1 {
+    background-color: blue;
+    color: violet;
+    border: 20px auto;
+    margin-left: 20px;
+    cursor: pointer;
+} */
+
+/* login form and button */
+/* .form-group-lg{
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px 40px;
+    background: aqua;
+    border-radius: 10px;
+    border: 5px solid grey;
+    text-underline-offset: 5px;
+}
+.form-outline-lg{
+    text-align: center;
+    color: white;
+    text-decoration: underline solid;
+    text-shadow: 1px 1px blue;
+    font-weight: bolder;
+    border: 2px solid gray;
+    background-color: rgb(16, 235, 16);
+    margin-bottom: 10px;
+    margin-left: -35px;
+    margin-right: -35px;
+    margin-top: -15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.c-button{
+    padding: 15px 15px 15px 15px;
+    color: black;
+    background-color: grey;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 10px;
+    width: 100%;
+    border: 5px solid green;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    max-width: 200px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px; 
+    font-weight: bolder;
+} */
+
+/* Agree - chekbox */
+/* input[type="checkbox"]{
+    accent-color: green;
+}
+
+#id_4{
+    cursor: pointer;
+    background-color: rgb(16, 235, 16);
+    max-width: 200px;
+}
+
+#id_3{
+    cursor: pointer;
+    background-color: rgb(16, 235, 16);
+    max-width: 350px;
+}
+
+.table{
+    margin-left: 120px;
+    border: 2px solid black;  
+    max-width: 1200px;
+}
+#tablehead{
+    margin-left: 120px;
+    margin-top: 20px;
+} */
+
+
+/* home page */
+/* #home_1{
+    text-align: center; 
+    border: 2px solid black; 
+    max-width: 1000px; 
+    padding-right: 75px;
+    padding-bottom: 75px;
+    padding-top: 50px;
+    padding-left: -30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#home_1 h2{
+    margin-left: 100px; 
+    margin-bottom: 40px; 
+    border: 3px solid rgb(244, 14, 60);
+    width: 800px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(244, 14, 60);
+} */
+
+
+/* About page */
+/* #heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+#heading h1{
+    font-size: 40px;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    position: relative;
+    border: 5px solid blue;
+    border-radius: 40px;
+    padding: 10px 15px 15px 15px;
+    background-color: blue;
+}
+#con-div{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-bottom: 200px;
+}
+#about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+#about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+#about-image:hover img{
+    transform: scale(1.2);
+}
+#about-content{
+    flex: 1;
+}
+#about-content h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #333;
+}
+#about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+} */
+
+/* footer section */
+/* footer{
+    background-color: #787777;
+    padding-top: 50px;
+}
+#footer-container{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width: 43.3%;
+}
+.footer-content h3{
+    font-size: 28px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+.footer-content p{
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    padding: 7px;
+    color: white;
+}
+.footer-content ul{
+    text-align: center;
+}
+#list {
+    padding: 0;
+}
+#list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+#list li::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #f18930;
+    transition-duration: .5s;
+}
+#list li:hover::before{
+    width: 70px;
+}
+#list li a{
+    text-decoration: none;
+    color: blue;
+}
+#list li a:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 2px;
+} */
+
+/* navbar links */
+/* #nav-bar li a{
+    border: 3px solid black;
+    color: white;
+    background-color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 30px;
+} */

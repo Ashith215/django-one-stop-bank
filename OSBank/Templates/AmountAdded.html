@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+{% load static %}
+{% load widget_tweaks %}
+
+<form action="" method="post">
+    {% csrf_token %} 
+
+    <div class="form-group-lg">
+
+        <div class="form-outline-lg">
+            <h1 style="text-transform: capitalize;">Add Amount</h1>
+        </div>
+
+        <h6>Username:</h6>
+        <div class="form-item">{% render_field form.user class="form-control" %}</div>
+
+        <h5 style="margin-top: 10px;">Amount:</h5>
+        <div class="form-item mb-3 mt-1">
+            {% render_field form.amount_added placeholder="Enter the amount to be added" class="form-control" %}
+        </div>
+
+        <button type="submit" class="submit-button c-button" id="id_4">CONFIRM</button>
+        
+    </div> 
+
+</form>
+
+
+{% endblock %}   

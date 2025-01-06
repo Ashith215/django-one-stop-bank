@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block body_block %}
+{% load widget_tweaks %}
+
+<form method="post">
+    {% csrf_token %} 
+
+    <div class="form-group-lg">
+        <div class="form-outline-lg">
+            <h1>Registration Form</h1>
+        </div>
+        <h5 style="text-align: center; padding-top: 1px;">(page - 1/2)</h5>
+            {{form.username.label_tag}}
+        <div class="form-item mb-3 mt-1">
+            {% render_field form.username placeholder="Enter the username" class="form-control" size="33" %}
+        </div>
+            {{form.password1.label_tag}}
+        <div class="form-item mb-3 mt-1">
+            {% render_field form.password1 placeholder="Enter the password" size="33" class="form-control" %}
+        </div>
+        {{form.password2.label_tag}}
+        <div class="form-item mb-3 mt-1">
+            {% render_field form.password2 placeholder="Re-enter the password" size="33" class="form-control" %}
+        </div>
+           <button type="submit" class="submit-button c-button" id="id_2">Save & Next</button> 
+        <div style="text-align: center;">
+        Already have an account? Then <a class="submit" href="{% url 'login' %}" type="text" style="color: blue;">Login here</a>
+        </div>
+    </div>
+    
+</form>
+{% endblock %}

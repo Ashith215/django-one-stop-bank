@@ -1,0 +1,84 @@
+{% extends 'main.html' %}
+
+{% block body_block %}
+
+
+<h4 id="tablehead">Account Info:</h4>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+        <br><a style="text-decoration: underline;">Name</a> : {{User.name}} <br> 
+        </th>
+        <th>
+        <br><a style="text-decoration: underline;">Account Number</a> : {{User.acc_no}} <br>
+        </th>
+    </tr>
+    <tr>
+    <tr>
+        <th style="color: green;">
+        <br><a style="text-decoration: underline;">Total Amount</a> : {{User.amount}} <br>
+        </th>
+        <th style="color: red;">
+        <br><a style="text-decoration: underline;">Total Loan</a> : {{User.loan}} <br>
+        </th>
+    </tr>
+    </thead>
+</table>
+
+<h4 id="tablehead">Loan Details:</h4>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+        <br><a>Rate Of Interest</a> :  <br>
+        </th>
+        <th>
+        <br>{{ROI}} %<br> 
+        </th>
+    </tr>
+    <tr>
+        <th>
+        <br><a>Tenure Of Loan</a> :  <br>
+        </th>
+        <th>
+        <br>{{Year}} years<br> 
+        </th>
+    </tr>
+    <tr style="color: red;">
+        <th>
+        <br><a>Principal Amount</a> :  <br>
+        </th>
+        <th>
+        <br>{{loan_Amount}}<br> 
+        </th>
+    </tr>
+    <tr>
+        <th>
+        <br><a>Monthly EMI</a> : <br> 
+        </th>
+        <th>
+        <br>{{loanEMI}}<br> 
+        </th>
+    </tr>
+    <tr>
+        <th>
+        <br><a>Total Interest</a> :  <br>
+        </th>
+        <th>
+        <br>{{Total_Interest}}<br>
+        </th>
+    </tr>
+    <tr>
+        <th>
+        <br><a>Total Amount</a> :  <br>
+        </th>
+        <th>
+        <br>{{Total_Amount}}<br>
+        </th>
+    </tr>
+    </thead>
+</table>
+
+
+{% endblock %} 

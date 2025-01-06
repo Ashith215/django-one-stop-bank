@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block body_block %}
+{% load widget_tweaks %}
+
+<form method="post">
+    {% csrf_token %} 
+
+    <div class="form-group-lg">
+        <div class="form-outline-lg">
+            <h1>USER LOGIN</h1>
+        </div>
+            {{form.username.label_tag}}
+        <div class="form-item mb-3 mt-1">
+            {% render_field form.username placeholder="Enter the username" size="33" class="form-control" %}
+        </div>
+            {{form.password.label_tag}}
+        <div class="form-item mb-3 mt-1">
+            {% render_field form.password placeholder="Enter the password" size="33" class="form-control" %}
+        </div>
+           <button type="submit" class="submit-button c-button" id="id_2">Login</button> 
+        <div style="text-align: center;">
+        Are you a new user? Then <a class="submit" href="{% url 'register_1' %}" type="text" style="color: blue;">Register here</a>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
