@@ -2,7 +2,6 @@
 
 {% block body_block %}
 {% load static %}
-{% load widget_tweaks %}
 
 <form action="" method="post">
     {% csrf_token %} 
@@ -14,19 +13,19 @@
         </div>
  
         <h6>Username:</h6>
-        <div class="form-item">{% render_field form.user class="form-control" %}</div>
+        <div class="form-control">{{form.user}}</div>
 
         <div>
          <h5 style="margin-top: 20px; margin-bottom: 10px; text-decoration: underline;">Add/Send to:</h5>
          <h6>Account Number:</h6>
         </div>
-        <div class="form-item mb-3 mt-1">
-            {% render_field form.account_number class="form-control" placeholder="Enter the account number" %}
+        <div class="form-control mb-3 mt-1">
+            {{form.account_number}}
         </div>
 
         <h5>Add Amount:</h5>
         <div class="form-item mb-3 mt-1">
-            {% render_field form.amount_added placeholder="Enter the amount to be added" class="form-control" %}
+            {{form.amount_added}}
         </div>
 
         <button type="submit" class="submit-button c-button" id="id_4">CONFIRM</button>

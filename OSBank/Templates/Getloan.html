@@ -2,7 +2,7 @@
 
 {% block body_block %}
 {% load static %}
-{% load widget_tweaks %}
+
 
 <form action="" method="post">
     {% csrf_token %} 
@@ -14,11 +14,11 @@
         </div>
 
         <h6>Username:</h6>
-        <div class="form-item">{% render_field form.user class="form-control" %}</div>
+        <div class="form-control">{{form.user}}</div>
 
         <h5 style="margin-top: 10px;">Loan Amount:</h5>
         <div class="form-item mb-3 mt-1">
-            {% render_field form.loan_amount placeholder="Enter the amount to be added" class="form-control" %}
+            {{form.loan_amount}}
         </div>
 
         <button type="submit" class="submit-button c-button" id="id_4">CONFIRM</button>

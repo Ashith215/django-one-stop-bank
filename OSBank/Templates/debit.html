@@ -2,7 +2,6 @@
 
 {% block body_block %}
 {% load static %}
-{% load widget_tweaks %}
 
 <form action="" method="post">
     {% csrf_token %} 
@@ -14,14 +13,14 @@
         </div>
  
         <h6 style="margin-top: 15px;">Username:</h6>
-        <div class="form-item">{% render_field form_d.user class="form-control" %}</div>
+        <div class="form-control">{{form_d.user}}</div>
 
         <h6 style="margin-top: 15px;">Bill Payments:</h6>
-        <div class="form-item">{% render_field form_d.bill_payments class="form-control" %}</div>
+        <div class="form-control">{{form_d.bill_payments}}</div>
 
         <h5 style="margin-top: 15px;">Amount:</h5>
         <div class="form-item mb-3 mt-1">
-            {% render_field form_d.debitpay_amount placeholder="Enter the amount" class="form-control" %}
+            {{form_d.debitpay_amount}}
         </div>
 
         <button type="submit" class="submit-button c-button" id="id_4">CONFIRM</button> 

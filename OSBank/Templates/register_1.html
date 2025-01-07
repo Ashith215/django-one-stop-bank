@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% block body_block %}
-{% load widget_tweaks %}
+{% load static %}
+
 
 <form method="post">
     {% csrf_token %} 
@@ -11,16 +12,16 @@
         </div>
         <h5 style="text-align: center; padding-top: 1px;">(page - 1/2)</h5>
             {{form.username.label_tag}}
-        <div class="form-item mb-3 mt-1">
-            {% render_field form.username placeholder="Enter the username" class="form-control" size="33" %}
+        <div class="form-control mb-3 mt-1">
+            {{form.username}}
         </div>
             {{form.password1.label_tag}}
-        <div class="form-item mb-3 mt-1">
-            {% render_field form.password1 placeholder="Enter the password" size="33" class="form-control" %}
+        <div class="form-control mb-3 mt-1">
+            {{form.password1}}
         </div>
         {{form.password2.label_tag}}
-        <div class="form-item mb-3 mt-1">
-            {% render_field form.password2 placeholder="Re-enter the password" size="33" class="form-control" %}
+        <div class="form-control mb-3 mt-1">
+            {{form.password2}}
         </div>
            <button type="submit" class="submit-button c-button" id="id_2">Save & Next</button> 
         <div style="text-align: center;">
